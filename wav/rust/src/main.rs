@@ -82,10 +82,6 @@ fn main() {
 
     println!("The header structure : {:#?} ", wave_header);
     
-    // let frames: Frames = HwParams::get_period_size(&hw_param).unwrap();
-    // let buffer_size: usize = usize::try_from(i64::from(wave_header.channel_num) * frames * 2).unwrap();
-    // println!("The buffer_size is => {} ", buffer_size);
-    
     let mut buffer = [0i16; 4096];
     let mut reader = BufReader::new(file);
     let mut state: bool = false;
